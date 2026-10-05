@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mini Apps для Telegram — розробка за 3–7 днів</title>
+<style>
+:root { --bg: #fff; --fg: #111; --muted: #666; --card: #f4f4f5; --accent: #2481cc; }
+@media (prefers-color-scheme: dark) { :root { --bg: #111; --fg: #f1f1f1; --muted: #aaa; --card: #1d1d1f; } }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+.hero { padding: 48px 0 24px; }
+.hero h1 { font-size: 2rem; margin: 0 0 12px; }
+.hero p { color: var(--muted); font-size: 1.1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 24px 0; }
+.card { background: var(--card); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 6px; font-size: 1rem; }
+.card p { margin: 0; color: var(--muted); font-size: .9rem; }
+h2 { margin-top: 40px; }
+ol.steps li, ul.check li { margin: 6px 0; }
+.cta { display: inline-block; margin-top: 16px; padding: 12px 24px; border-radius: 10px;
+  background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+.muted { color: var(--muted); font-size: .9rem; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>Telegram Mini Apps за 3–7 днів</h1>
+    <p>Магазини, бронювання, каталоги, ігри, дашборди — всередині Telegram.
+    Оплата Stars, українська підтримка, запуск під ключ.</p>
+    <!-- TODO: вставити свій юзернейм замість YOUR_CONTACT -->
+    <a class="cta" href="https://t.me/YOUR_CONTACT">Обговорити проєкт</a>
+  </div>
+
+  <h2>Що вміємо</h2>
+  <div class="grid">
+    <div class="card"><h3>🛍 Магазин</h3><p>Каталог, кошик, замовлення, оплата Stars, рефералки.</p></div>
+    <div class="card"><h3>📅 Бронювання</h3><p>Послуги, календар, слоти, нагадування від бота.</p></div>
+    <div class="card"><h3>📚 Каталог</h3><p>Категорії, пошук, обране, діплінки, шерінг.</p></div>
+    <div class="card"><h3>🎮 Міні-ігри</h3><p>Рекорди, fullscreen, invite- механіки.</p></div>
+    <div class="card"><h3>📊 Дашборди</h3><p>KPI, апруви, живий стрім подій, AI-агенти.</p></div>
+    <div class="card"><h3>⭐ Оплата Stars</h3><p>Інвойси, підписки, повернення — повний цикл.</p></div>
+  </div>
+
+  <h2>Пакети</h2>
+  <table>
+    <tr><th>Пакет</th><th>Що входить</th><th>Термін</th></tr>
+    <tr><td><b>Старт</b></td><td>Готовий дизайн + ваш брендинг + бот + запуск</td><td>3 дні</td></tr>
+    <tr><td><b>Про</b></td><td>Старт + оплати + CRM + аналітика + пуші</td><td>7 днів</td></tr>
+    <tr><td><b>Scale</b></td><td>Спільноти, AI-агенти, навантаження, SLA</td><td>індивідуально</td></tr>
+  </table>
+
+  <h2>Як проходить запуск</h2>
+  <ol class="steps">
+    <li>Бриф на 15 хвилин: ніша, функції, дизайн.</li>
+    <li>Збираємо міні-апп на перевіреному темплейті.</li>
+    <li>Підключаємо бота, оплати, домен.</li>
+    <li>Тестуємо разом з вами в Telegram.</li>
+    <li>Реліз + метрики першого тижня.</li>
+  </ol>
+
+  <h2>Безпека за замовчуванням</h2>
+  <ul class="check">
+    <li>Серверна перевірка підпису Telegram (initData HMAC).</li>
+    <li>Один домен = один origin, токени ніколи в коді.</li>
+    <li>Захист від брутфорса на ендпоінтах оплати.</li>
+  </ul>
+
+  <p class="muted">Зібрано на TeleAppBase: 6 темплейтів, CI на кожну зміну, лабораторія нових фіч Bot API.</p>
+</div>
+</body>
+</html>
